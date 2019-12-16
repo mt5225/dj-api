@@ -1,0 +1,7 @@
+from django.urls import path
+from .api import views
+
+urlpatterns = [
+    path('posts', views.PostListView.as_view()),
+    path('authors', views.AuthorListView.as_view())
+]
