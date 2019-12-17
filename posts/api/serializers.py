@@ -5,10 +5,11 @@ from rest_framework import serializers
 class PostSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
-        fields = ('title', 'content', 'is_featured')
+        fields = ('id', 'title', 'author', 'content', 'is_featured')
+        depth = 1
 
 
 class AuthorSerializer(serializers.ModelSerializer):
     class Meta:
         model = Author
-        fields = ('first_name', 'last_name', 'age', 'sex')
+        fields = ('id', 'first_name', 'last_name', 'age', 'sex')
