@@ -20,4 +20,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/psapp/', include('posts.urls')),
     path('api/tdapp/', include('todos.urls')),
+    path('django-rq/', include('django_rq.urls')),
+    path('ping/', include('ping.urls')),
 ]

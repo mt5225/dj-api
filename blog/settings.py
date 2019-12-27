@@ -40,6 +40,9 @@ INSTALLED_APPS = [
     'rest_framework',
     'posts',
     'todos',
+    'weblog',
+    'ping',
+    'django_rq',
 ]
 
 MIDDLEWARE = [
@@ -83,6 +86,14 @@ DATABASES = {
     }
 }
 
+# django-rq
+RQ_QUEUES = {
+    'default': {
+        'HOST': 'localhost',
+        'PORT': 6379,
+        'DB': 0,
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators

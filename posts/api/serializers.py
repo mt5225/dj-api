@@ -1,4 +1,4 @@
-from ..models import Post, Author
+from posts.models import Post, Author, Person
 from rest_framework import serializers
 
 
@@ -13,3 +13,9 @@ class AuthorSerializer(serializers.ModelSerializer):
     class Meta:
         model = Author
         fields = ('id', 'first_name', 'last_name', 'age', 'sex')
+
+
+class PersonSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Person
+        fields = ('first_name', 'last_name', 'birth_date')
